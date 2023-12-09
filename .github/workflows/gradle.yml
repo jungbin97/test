@@ -47,7 +47,7 @@ jobs:
     # dockerfile을 통해 이미지를 빌드하고, 이를 docker hub repo로 push
     # 이때 사용되는 ${{ secrets.DOCER_REPO }}/directors-dev가 위에서 만든 도커 repository이다.
     - name: Login to Docker Hub
-      uses: docker/login-action@v3
+      uses: docker/login-action@v2
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
