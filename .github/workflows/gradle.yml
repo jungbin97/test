@@ -69,7 +69,6 @@ jobs:
     # 실행시 docker-compose를 사용함
     - name: Deploy to server
       uses: appleboy/ssh-action@master
-      id: deploy
       with:
         key: ${{ secrets.KEY }}
         host: ${{ secrets.HOST }}
