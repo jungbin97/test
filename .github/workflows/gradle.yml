@@ -75,9 +75,8 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         script: |
-          whoami
-#          sudo docker rm -f $(docker ps -qa)
-#          sudo docker pull ${{ secrets.DOCKERHUB_REPO }}
-#          sudo docker run -d -p 8080:8080 ${{ secrets.DOCKERHUB_REPO }}
+          sudo docker rm -f $(docker ps -qa)
+          sudo docker pull ${{ secrets.DOCKERHUB_REPO }}
+          sudo docker run -d -p 8080:8080 ${{ secrets.DOCKERHUB_REPO }}
   #        docker-compose up -d
   #        docker image prune -f
