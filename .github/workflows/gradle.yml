@@ -72,11 +72,13 @@ jobs:
       id: deploy
       with:
         host: ${{ secrets.HOST }}
+        port: ${{ secrets.PORT }}
         username: ubuntu
         key: ${{ secrets.KEY }}
         script: |
-          sudo docker rm -f $(docker ps -qa)
-          sudo docker pull ${{ secrets.DOCKERHUB_REPO }}
-          sudo docker run -d -p 8080:8080 ${{ secrets.DOCKERHUB_REPO }}
+          whoami
+#          sudo docker rm -f $(docker ps -qa)
+#          sudo docker pull ${{ secrets.DOCKERHUB_REPO }}
+#          sudo docker run -d -p 8080:8080 ${{ secrets.DOCKERHUB_REPO }}
   #        docker-compose up -d
   #        docker image prune -f
