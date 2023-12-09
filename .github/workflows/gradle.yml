@@ -71,10 +71,10 @@ jobs:
       uses: appleboy/ssh-action@master
       id: deploy
       with:
-        host: ${{ secrets.HOST }}
-        port: ${{ secrets.PORT }}
-        username: ubuntu
         key: ${{ secrets.KEY }}
+        host: ${{ secrets.HOST }}
+        username: ubuntu
+        port: ${{ secrets.PORT }}
         script: |
           whoami
 #          sudo docker rm -f $(docker ps -qa)
