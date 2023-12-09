@@ -72,7 +72,7 @@ jobs:
       with:
         key: ${{ secrets.KEY }}
         host: ${{ secrets.HOST }}
-        username: ubuntu
+        username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         script: |
           whoami
